@@ -71,8 +71,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 if (!textScanning && imageFile == null)
                   Container(
                     width: 300,
-                    height: 300,
-                    color: Colors.grey[300]!,
+                    height: 30,
+                    color: Colors.white10,
                   ),
                 if (imageFile != null) Image.file(File(imageFile!.path)),
                 Row(
