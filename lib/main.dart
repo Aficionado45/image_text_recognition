@@ -42,8 +42,23 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        title: const Text("Text Recognition example"),
+        backgroundColor: Colors.white,
+        title: Text(
+          "Braille OCR",
+          style: TextStyle(color: Colors.black),
+        ),
+        toolbarHeight: MediaQuery.of(context).size.height / 10,
+        elevation: 0,
+        leadingWidth: MediaQuery.of(context).size.width / 4,
+        leading: Padding(
+          padding: const EdgeInsets.all(0),
+          child: Hero(
+            tag: 'logo',
+            child: Image(
+              image: AssetImage('images/braille.jpg'),
+            ),
+          ),
+        ),
       ),
       body: Center(
           child: SingleChildScrollView(
